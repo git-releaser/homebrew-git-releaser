@@ -9,16 +9,16 @@ class GitReleaser < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/git-releaser/git-releaser/releases/download/0.1.0/git-releaser_Darwin_x86_64.tar.gz"
-      sha256 "3565afd4ef9b7fbfef037500edd7e9475da900093a3dff2f86d75002f16b3d16"
+      url "https://github.com/git-releaser/git-releaser/releases/download/v0.1.0/git-releaser_Darwin_x86_64.tar.gz"
+      sha256 "a680c77b89eaa573542427df7e7cf8520a756877daf5b2266c865d7abf324ebd"
 
       def install
         bin.install "git-releaser"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/git-releaser/git-releaser/releases/download/0.1.0/git-releaser_Darwin_arm64.tar.gz"
-      sha256 "ee1133a0b4aa49c3f4afa1dbcf2178b2d45d2515623bbdc0c782ca6904b0e137"
+      url "https://github.com/git-releaser/git-releaser/releases/download/v0.1.0/git-releaser_Darwin_arm64.tar.gz"
+      sha256 "2d52a36751d9386605f7330f82659f5a0e9945803cc9b371ea76e07d05eb82e8"
 
       def install
         bin.install "git-releaser"
@@ -28,16 +28,16 @@ class GitReleaser < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/git-releaser/git-releaser/releases/download/0.1.0/git-releaser_Linux_arm64.tar.gz"
-      sha256 "2ecbc26b4b894a8268485390167df117674a7ffed64aa84e9dbaaaab43772712"
+      url "https://github.com/git-releaser/git-releaser/releases/download/v0.1.0/git-releaser_Linux_arm64.tar.gz"
+      sha256 "da5ea64d9598480036c8987b192f41dd518261626f0005e0faab428d6dbd5121"
 
       def install
         bin.install "git-releaser"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/git-releaser/git-releaser/releases/download/0.1.0/git-releaser_Linux_x86_64.tar.gz"
-      sha256 "1716e5cd499ad90fa8af0f1808d7f4707520ee8c75e317c2e3687966a665aaee"
+      url "https://github.com/git-releaser/git-releaser/releases/download/v0.1.0/git-releaser_Linux_x86_64.tar.gz"
+      sha256 "ec416e32aee994ed1d42ff8cccc7e9d496bc738bbbb52c81355faf5cacc8e923"
 
       def install
         bin.install "git-releaser"

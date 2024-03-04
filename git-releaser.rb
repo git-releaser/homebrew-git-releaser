@@ -9,16 +9,16 @@ class GitReleaser < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/git-releaser/git-releaser/releases/download/v0.1.3/git-releaser_Darwin_arm64.tar.gz"
-      sha256 "cf7d9d55457606fcac688b8fa0e944cb0024e85202e30b0f1d8a5b32e063dcd0"
+      url "https://github.com/git-releaser/git-releaser/releases/download/0.1.3/git-releaser_Darwin_arm64.tar.gz"
+      sha256 "6a4e5946f91b395dc3e9059132b69b10d8d894b24f09667e0d34f9097d3b0ebc"
 
       def install
         bin.install "git-releaser"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/git-releaser/git-releaser/releases/download/v0.1.3/git-releaser_Darwin_x86_64.tar.gz"
-      sha256 "863e1249db08caac25da72c324b37f8a0033f503329fa2f44eb3b7f40a91e16f"
+      url "https://github.com/git-releaser/git-releaser/releases/download/0.1.3/git-releaser_Darwin_x86_64.tar.gz"
+      sha256 "41e304bc6f7043f4a372ca507858e69bd1320eef5a36bd648c355fa898acad8d"
 
       def install
         bin.install "git-releaser"
@@ -27,17 +27,17 @@ class GitReleaser < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/git-releaser/git-releaser/releases/download/v0.1.3/git-releaser_Linux_x86_64.tar.gz"
-      sha256 "a2e1e1bd3310f27d1fd5e4024c13c81ef49229f6441253e1c0f3defcff44dc20"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/git-releaser/git-releaser/releases/download/0.1.3/git-releaser_Linux_arm64.tar.gz"
+      sha256 "9d579deb95c1668d8c2ed7b8d6bbf537624bc853b1b7ab3220ca5fd0bb814f76"
 
       def install
         bin.install "git-releaser"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/git-releaser/git-releaser/releases/download/v0.1.3/git-releaser_Linux_arm64.tar.gz"
-      sha256 "396b77bc4199191b5db800023750f05938b2554c9f53d7ebcc2bfb51ad6b5c36"
+    if Hardware::CPU.intel?
+      url "https://github.com/git-releaser/git-releaser/releases/download/0.1.3/git-releaser_Linux_x86_64.tar.gz"
+      sha256 "faeff3aff88f5a3b6058f370ec2a1ecb9f1021a3bdc0388d1a0de9a4f7fd2791"
 
       def install
         bin.install "git-releaser"

@@ -5,20 +5,20 @@
 class GitReleaser < Formula
   desc ""
   homepage "https://github.com/git-releaser/git-releaser"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/git-releaser/git-releaser/releases/download/0.1.3/git-releaser_Darwin_arm64.tar.gz"
-      sha256 "6a4e5946f91b395dc3e9059132b69b10d8d894b24f09667e0d34f9097d3b0ebc"
+    if Hardware::CPU.intel?
+      url "https://github.com/git-releaser/git-releaser/releases/download/v0.1.4/git-releaser_Darwin_x86_64.tar.gz"
+      sha256 "200cacd79d400fee53f0bb1b899c4e4fffaa03c68da63e33e6c5d87328dc4adb"
 
       def install
         bin.install "git-releaser"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/git-releaser/git-releaser/releases/download/0.1.3/git-releaser_Darwin_x86_64.tar.gz"
-      sha256 "41e304bc6f7043f4a372ca507858e69bd1320eef5a36bd648c355fa898acad8d"
+    if Hardware::CPU.arm?
+      url "https://github.com/git-releaser/git-releaser/releases/download/v0.1.4/git-releaser_Darwin_arm64.tar.gz"
+      sha256 "df83a13c9beba53d6eace5fe869ccf7d60b79ce328c83d302d477c545605b810"
 
       def install
         bin.install "git-releaser"
@@ -27,17 +27,17 @@ class GitReleaser < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/git-releaser/git-releaser/releases/download/0.1.3/git-releaser_Linux_arm64.tar.gz"
-      sha256 "9d579deb95c1668d8c2ed7b8d6bbf537624bc853b1b7ab3220ca5fd0bb814f76"
+    if Hardware::CPU.intel?
+      url "https://github.com/git-releaser/git-releaser/releases/download/v0.1.4/git-releaser_Linux_x86_64.tar.gz"
+      sha256 "65ec9e110c23912d06ff19135440fe01d06358647541697c4d32756a2a31ce5c"
 
       def install
         bin.install "git-releaser"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/git-releaser/git-releaser/releases/download/0.1.3/git-releaser_Linux_x86_64.tar.gz"
-      sha256 "faeff3aff88f5a3b6058f370ec2a1ecb9f1021a3bdc0388d1a0de9a4f7fd2791"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/git-releaser/git-releaser/releases/download/v0.1.4/git-releaser_Linux_arm64.tar.gz"
+      sha256 "4d1adc4c0e9e7ac14946a4bc60a2ad41b9dbd0a679dff2536f5ecec07c6ed97a"
 
       def install
         bin.install "git-releaser"
